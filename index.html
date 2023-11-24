@@ -7,7 +7,7 @@
     <!-- content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos."> -->
   <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> MPOD123</title>
+  <title>MPOD123</title>
 
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -84,90 +84,15 @@
 
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">MPOD123:One Image to 3D Content Generation UsingMask-enhanced Progressive Outline-to-Detail Optimization</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- <span class="author-block">
-                <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-              <span class="author-block">
-                <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-              </span> -->
-            </div>
-
-            <!-- <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>University of Washington,</span>
-              <span class="author-block"><sup>2</sup>Google Research</span>
-            </div> -->
-
-            <!-- <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- PDF Link. 
-                <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2011.12948" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2011.12948" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-                <!-- Video Link. 
-                <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span>
-                <!-- Code Link. 
-                <span class="link-block">
-                  <a href="https://github.com/google/nerfies" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-                <!-- Dataset Link. 
-                <span class="link-block">
-                  <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="far fa-images"></i>
-                    </span>
-                    <span>Data</span>
-                  </a>
-              </div> -->
-
-            </div>
+      <div class="columns is-centered has-text-centered">
+          <div class="column has-text-centered is-10">
+            <h1 class="title is-2 publication-title">
+              MPOD123: 
+            One Image to 3D Content Generation Using Mask-enhanced Progressive Outline-to-Detail Optimization
+          </h1>
           </div>
-        </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -220,6 +145,21 @@
             <h2 class="title is-3">Method</h2>
             <div class="column is-full">
               <img src="./static\images\method.jpg">
+              <p>
+                <b>Overview of MPOD123.</b>
+                We generate high-quality 3D content from an input image in a progressive optimization manner. 
+                At the first stage, we utilize a view-conditioned diffusion model (Zero-1-to-3) to guide the 
+                optimization of neural radiance field (NeRF) in novel views. 
+                For a certain viewpoint, relative viewpoint transformation (R,T) and input image are used as 
+                conditional information of Zero-1-to-3. 
+                At the second stage, we initialize a textured 3D mesh from the NeRF. 
+                We utilize our Detail Appearance Inpainting approach (DAI) to guide the optimization of the 
+                3D mesh in novel views. 
+                For a certain viewpoint, DAI takes two conditional inputs: 2D mask built from the NeRF in the 
+                same viewpoint and text prompt derived from the input image.
+                We impose a loss <i>&Lscr;<SUB>ref</SUB></i> &nbsp;in both stages to ensure the image rendered from the reference view is 
+                fitted to the input image.
+              </p>
             </div>
           </div>
         </div>
