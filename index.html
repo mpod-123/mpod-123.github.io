@@ -37,6 +37,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <!-- <link rel="icon" href=".\static\images\ico.png" type="image/x-icon" /> -->
 </head>
 
 <body>
@@ -120,9 +121,9 @@
             the outline shape optimization of the 3D content. 
             Given certain viewpoint, we estimate outline shape priors in the form of 2D mask from the 3D content by 
             leveraging opacity calculation. 
-            In the second stage, MPOD123 incorporates Detail Appearance Inpainting(DAI) to guide the polishment on 
+            In the second stage, MPOD123 incorporates Detail Appearance Inpainting (DAI) to guide the polishment on 
             local geometry and texture with the shape priors.  
-            The essence of DAI lies in the Mask Rectified Cross-Attention(MRCA), which can be conveniently plugged in 
+            The essence of DAI lies in the Mask Rectified Cross-Attention (MRCA), which can be conveniently plugged in 
             the stable diffusion model. 
             The MRCA module utilizes the mask to rectify the attention map from each cross-attention layer. 
             Accompanied with this new module, DAI is capable of guiding the detail polishing of the 3D content, while 
@@ -134,17 +135,20 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
     <!--/ Abstract. -->
 
 
     <section class="section">
       <div class="container is-max-desktop">
         <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
+        <div class="columns is-centered">
           <div class="column is-full">
             <h2 class="title is-3">Method</h2>
             <div class="column is-full">
               <img src="./static\images\method.jpg">
+              <div class="content has-text-justified">
               <p>
                 <b>Overview of MPOD123.</b>
                 We generate high-quality 3D content from an input image in a progressive optimization manner. 
@@ -161,15 +165,19 @@
                 fitted to the input image.
               </p>
             </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+    
 
   <section class="section">
     <!-- <h2 class="subtitle">
     A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
   </h2> -->
     <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Results</h2>
+        <h2 class="title is-3">Results</h2>
         <div class="columns is-mobile is-centered">
           <div class="column">
             <div class="is-size-5 has-text-centered">input</div>
@@ -638,19 +646,11 @@
   year      = {2021},
 }</code></pre>
     </div>
-  </section>
+  </section> -->
 
 
   <footer class="footer">
     <div class="container">
-      <div class="content has-text-centered">
-        <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
-          <i class="fas fa-file-pdf"></i>
-        </a>
-        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
@@ -660,17 +660,13 @@
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
             <p>
-              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
-                code</a> of this website,
-              we just ask that you link back to this page in the footer.
-              Please remember to remove the analytics code included in the header of the website which
-              you do not want on your website.
+              The website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
             </p>
           </div>
         </div>
       </div>
     </div>
-  </footer> -->
+  </footer>
 
 </body>
 
